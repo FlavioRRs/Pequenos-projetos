@@ -1,0 +1,104 @@
+:root {
+    --background: #121212;
+    --background-start: #5F8D4E;
+    --background-pause: #2C3639;
+    --background-stop: #FA7070;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+}
+
+main {
+    text-align: center;
+}
+
+main h1 {
+    color: white;
+    font-size: 8rem;
+    transition: all 0.5s;
+}
+
+button {
+    padding: 0.5em 1em;
+    font-size: 2rem;
+    color: white;
+    border: 2px solid white;
+    opacity: 0.8;
+    transition: all 0.3s;
+    border-radius: 3px;
+}
+
+.start {
+    background: var(--background-start);
+}
+
+.pause {
+    background: var(--background-pause);
+}
+
+.stop {
+    background: var(--background-stop);
+}
+
+button:disabled , button:disabled:hover{
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    color: grey;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1.5em;
+    padding: 30px;
+    background-color: rgba(128, 128, 128, 0.2);
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer a {
+    color: grey;
+}
+
+footer a i:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+@media (max-width: 540px) {
+    main h1 {
+        font-size: 5.5rem;
+    }
+
+    main section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        font-size: 1.5rem;
+    }
+}
